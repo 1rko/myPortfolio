@@ -1,8 +1,8 @@
 import React from 'react';
-import {ContentContainer} from "../../Components/ContentContainer";
-import {FlexContainer} from "../../Components/FlexContainer";
+import {ContentContainer} from "../../../Components/ContentContainer";
+import {FlexContainer} from "../../../Components/FlexContainer";
 import {СontactsStyled} from "./Сontacts.styled";
-import {SectionTitle} from "../../Components/sectionTitle/SectionTitle";
+import {SectionTitle} from "../../../Components/sectionTitle/SectionTitle";
 
 export const Contacts = () => {
     return (

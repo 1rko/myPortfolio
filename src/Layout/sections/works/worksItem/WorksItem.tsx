@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlexContainer} from "../../../Components/FlexContainer";
+import {FlexContainer} from "../../../../Components/FlexContainer";
 import {WorksItemStyled} from "./WorksItem.styled";
 
 export const WorksItem = () => {

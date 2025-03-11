@@ -14,7 +14,7 @@ export const Header = () => {
             <ContentContainer>
                 <FlexContainer justifyContent={'space-between'}  >
                     <a href=''>
-                        <h2>IRKO</h2>
+                        <h2>DAMADAMS</h2>
                     </a>
                     <Menu menuItems={menuItems}/>
                 </FlexContainer>

@@ -1,10 +1,10 @@
 import React from 'react';
-import {MainSection} from "./mainSection/MainSection";
-import {Skills} from "./skills/Skills";
-import {Works} from "./works/Works";
-import {Testimonials} from "./testimonials/Testimonials";
-import {Contacts} from "./contacts/Сontacts";
-import {ProjectsCount} from "./projectsCount/ProjectsCount";
+import {MainSection} from "./sections/mainSection/MainSection";
+import {Skills} from "./sections/skills/Skills";
+import {Works} from "./sections/works/Works";
+import {Testimonials} from "./sections/testimonials/Testimonials";
+import {Contacts} from "./sections/contacts/Сontacts";
+import {ProjectsCount} from "./sections/projectsCount/ProjectsCount";
 
 export const MainContent = () => {
     return (

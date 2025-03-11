@@ -1,6 +1,6 @@
 import React from 'react';
-import {ContentContainer} from "../../../Components/ContentContainer";
-import {FlexContainer} from "../../../Components/FlexContainer";
+import {ContentContainer} from "../../../../Components/ContentContainer";
+import {FlexContainer} from "../../../../Components/FlexContainer";
 import {ItemProjectsCountStyled} from "./ItemProjectsCount.styled";
 
 export const ItemProjectsCount = () => {

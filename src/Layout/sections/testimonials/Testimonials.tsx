@@ -1,8 +1,8 @@
 import React from 'react';
-import {ContentContainer} from "../../Components/ContentContainer";
-import {FlexContainer} from "../../Components/FlexContainer";
+import {ContentContainer} from "../../../Components/ContentContainer";
+import {FlexContainer} from "../../../Components/FlexContainer";
 import {TestimonialsStyled} from "./Testimonials.styled";
-import {Icon} from "../../Components/Icon";
+import {Icon} from "../../../Components/Icon";
 import {Slider} from "./slider/Slider";
 
 export const Testimonials = () => {

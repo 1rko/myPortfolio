@@ -1,6 +1,6 @@
 import React from 'react';
-import {ContentContainer} from "../../Components/ContentContainer";
-import {FlexContainer} from "../../Components/FlexContainer";
+import {ContentContainer} from "../../../Components/ContentContainer";
+import {FlexContainer} from "../../../Components/FlexContainer";
 import {ProjectsCountStyled} from "./ProjectsCount.styled";
 import {ItemProjectsCount} from "./itemProjectsCount/ItemProjectsCount";
 
