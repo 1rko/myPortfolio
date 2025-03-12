@@ -1,17 +1,17 @@
 import React from 'react';
 import {ContentContainer} from "../../../Components/ContentContainer";
 import {FlexContainer} from "../../../Components/FlexContainer";
-import {TestimonialsStyled} from "./Testimonials.styled";
 import {Icon} from "../../../Components/Icon";
 import {Slider} from "./slider/Slider";
+import styled from "styled-components";
 
 export const Testimonials = () => {
     return (
         <TestimonialsStyled>
             <ContentContainer>
-                <FlexContainer>
+                <FlexContainer alignItems={'center'}>
                     <div>
-                        <Icon iconId={''}/>
+                        <Icon iconId={'quote'}/>
                         <Slider/>
                     </div>
                 </FlexContainer>
@@ -19,6 +19,10 @@ export const Testimonials = () => {
         </TestimonialsStyled>
     );
 };
+
+export const TestimonialsStyled = styled.section`
+  background-color: ${(props) => props.theme.colors.fourth};
+`
 
 
 

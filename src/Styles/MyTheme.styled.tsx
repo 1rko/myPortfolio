@@ -6,6 +6,7 @@ export const myTheme: DefaultTheme = {
         primary: '#fb3f5c',
         secondary: '#191018',
         third: '#f8eeef',
-        fourth: '#FEC5CE'
+        fourth: '#FEC5CE',
+        fifh: ' #2d2d2d'
     },
 };

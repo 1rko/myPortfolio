@@ -25,7 +25,7 @@ export const ProjectsCount = () => {
         <ProjectsCountStyled>
             <ContentContainer>
                 <FlexContainer justifyContent={'space-around'} alignItems={'center'}>
-                    {projectsCountData.map(item => ( <ItemProjectsCount count={item.count}  item={item.item}/>))}
+                    {projectsCountData.map(item => (<ItemProjectsCount count={item.count} item={item.item}/>))}
                 </FlexContainer>
             </ContentContainer>
         </ProjectsCountStyled>

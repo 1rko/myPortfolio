@@ -2,12 +2,19 @@ import React from 'react';
 import {FlexContainer} from "../../../../Components/FlexContainer";
 import {WorksItemStyled} from "./WorksItem.styled";
 
-export const WorksItem = () => {
+type WorksItemPropsType = {
+    src: string
+    alt:string
+    title: string
+    description: string
+}
+
+export const WorksItem = ({src, alt, title, description}: WorksItemPropsType) => {
     return <WorksItemStyled>
-        <FlexContainer flexDirection={'column'}>
-            <img src={''} alt={'work'}/>
-            <h3>Project title</h3>
-            <p>UI, Art drection</p>
+        <FlexContainer flexDirection={'column'} alignItems={'start'} >
+            <img src={src} alt={alt}/>
+            <h3>{title}</h3>
+            <p>{description}</p>
         </FlexContainer>
     </WorksItemStyled>;
 }

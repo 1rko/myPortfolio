@@ -67,6 +67,7 @@ export const BgcImg = styled.img`
   width: 50%;
   height: 692px;
   object-fit: cover;
+  object-position: left;
   z-index: -9999;
 `
 

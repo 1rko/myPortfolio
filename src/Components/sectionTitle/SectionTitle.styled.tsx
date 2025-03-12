@@ -5,7 +5,7 @@ type SectionTitleStyledPropsType = {
 }
 
 export const SectionTitleStyled = styled.h2<SectionTitleStyledPropsType>`
-  font-family: 'Nunito';
+  font-family: 'Nunito', sans-serif;
   font-weight: 700;
   font-size: 48px;
   line-height: 120%;

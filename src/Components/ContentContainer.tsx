@@ -6,6 +6,7 @@ export const ContentContainer = styled.div`
   height: 100%;
   margin: 0 auto;
   border: 2px solid green;
+  position: relative;
 
   @media (max-width: 1140px) {
     padding: 0 15px;
