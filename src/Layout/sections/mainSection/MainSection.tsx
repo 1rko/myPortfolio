@@ -16,19 +16,22 @@ export const MainSection = () => {
     return (
         <MainSectionStyled>
             <ContentContainer>
-                <FlexContainer justifyContent={'space-between'}>
+                <FlexContainer justifyContent={'space-between'} gap={'240px'}>
                     <div>
                         <SubtitleStyled>Hello,</SubtitleStyled>
                         <SectionTitleStyled>I’m <span>Daniella Adams</span></SectionTitleStyled>
-                        <SectionMainTitle>I’m a Graphics Designer,Designng has become my everyday affair. masting styles,grids cant be less interesting.</SectionMainTitle>
+                        <SectionMainTitle>I’m a Graphics Designer,Designng has become my everyday affair. masting
+                            styles,grids cant be less interesting.</SectionMainTitle>
                         <ButtonStyled>Download CV</ButtonStyled>
                     </div>
                     <StyledBackground>
                         <ImgPhotoStyled src={portfolioPhoto} alt={'Фото'}/>
-                        <Icon iconId={'triangle'} width={'621'} height={'692'} viewBox={'0 0 621 692'}/>
+                        {/*<img src={iconsSprite} alt={''}/>*/}
+                        {/*<Icon iconId={'triangle'} width={'50'} height={'50'} viewBox={'0 0 50 50 '}/>*/}
                     </StyledBackground>
                 </FlexContainer>
             </ContentContainer>
+            <BgcImg src={iconsSprite} alt={''}/>
         </MainSectionStyled>
     );
 };
@@ -41,7 +44,7 @@ export const SubtitleStyled = styled.span`
 `
 
 export const SectionMainTitle = styled.h2`
-/*  font-family: var(--font-family);*/
+  /*  font-family: var(--font-family);*/
   font-weight: 400;
   font-size: 24px;
   letter-spacing: 0.06em;
@@ -52,5 +55,18 @@ export const SectionMainTitle = styled.h2`
 
 export const StyledBackground = styled.div`
   position: relative;
+  width: 50%;
+  height: 100%;
+`
+
+export const BgcImg = styled.img`
+  position: absolute;
+  right: 0;
+  left: 50%;
+  top: 130px;
+  width: 50%;
+  height: 692px;
+  object-fit: cover;
+  z-index: -9999;
 `
 

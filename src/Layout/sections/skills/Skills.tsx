@@ -9,6 +9,7 @@ import {SectionTitleStyled} from "../../../Components/sectionTitle/SectionTitle.
 import {ButtonStyled} from "../../../Components/Button.styled";
 import {Skill} from "../../../Components/Skill";
 import imgFigma from "../../../Assets/icons/Figma Icon.png"
+import triangle2 from "../../../Assets/icons/Rectangle 398.svg"
 
 const imgF = {
     src: imgFigma as string | undefined,
@@ -19,8 +20,11 @@ export const Skills = () => {
     return (
         <SkillsStyled>
             <ContentContainer>
-                <FlexContainer justifyContent={'space-between'} gap={'10px'}>
-                    <ImgPhotoForSkillsStyled src={portfolioPhoto} alt={'Фото'}/>
+                <FlexContainer justifyContent={'space-between'} alignItems={'start;'} gap={'220'}>
+                    <ImgBgcStyled>
+                        <ImgPhotoForSkillsStyled src={portfolioPhoto} alt={'Фото'}/>
+                        <BgcTriangle2Styled src={triangle2} alt={'triangle'}/>
+                    </ImgBgcStyled>
                     <SkillsWrapperStyled>
                         <SkillsSectionTitle>I am a creative Graphic & UI Designer</SkillsSectionTitle>
                         <SkillsDescription>I’m a Graphics Designer,Designng has become my everyday affair. masting
@@ -44,8 +48,7 @@ export const Skills = () => {
 
 export const SkillsStyled = styled.section`
   ${(props) => props.theme.colors.third};
-  margin-top: 240px;
-  margin-bottom: 200px;
+  margin-bottom: 215px;
 `
 
 export const ImgPhotoForSkillsStyled = styled(ImgPhotoStyled)`
@@ -72,4 +75,18 @@ export const SkillsSectionTitle = styled(SectionTitleStyled)`
   width: 520px;
   text-transform: capitalize;
 `
+
+export const ImgBgcStyled = styled.div`
+ position: relative;
+`
+
+export const BgcTriangle2Styled = styled.img`
+ position: absolute;
+  top: 70px;
+  left: 22px;
+  z-index: -9999;
+  
+  
+`
+
 
