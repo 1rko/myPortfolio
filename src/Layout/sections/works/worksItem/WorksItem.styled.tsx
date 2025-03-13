@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const WorksItemStyled = styled.section`
-  color: ${(props) => props.theme.colors.fifh};
+  color: ${(props) => props.theme.colors.fifth};
 
   img {
     height: 330px;
