@@ -9,7 +9,6 @@ import {Ratio} from "./Ratio";
 
 export const Slider = () => {
     return (
-        <SliderStyled>
             <SliderWrapper>
                 <Icon iconId={'quo'} width={'110'} height={'86'} viewBox={'0 0 110 86'}/>
                 <FlexContainer flexDirection={'column'} alignItems={'center'}>
@@ -21,20 +20,16 @@ export const Slider = () => {
                     <Ratio starsCount={5}/>
                 </FlexContainer>
             </SliderWrapper>
-        </SliderStyled>
     );
 };
-
-export const SliderStyled = styled.article`
-  background-color: ${(props) => props.theme.colors.fourth};
-`
 
 export const SliderWrapper = styled.div`
   background-color: #fff;
   background-image: url(${bg});
   border-radius: 140px 0;
   padding: 52px 57px;
-  width: 726px;
+  max-width: 726px;
+ /* width: 100%;*/
   height: 100%;
   box-shadow: 0 54px 104px 0 rgba(0, 0, 0, 0.04);
 

@@ -1,9 +1,7 @@
 import React from 'react';
 import {ContentContainer} from "../../../Components/ContentContainer";
 import {FlexContainer} from "../../../Components/FlexContainer";
-import {WorksStyled} from "./Works.styled";
 import {WorksItem} from "./worksItem/WorksItem";
-import {SectionTitle} from "../../../Components/sectionTitle/SectionTitle";
 import img1 from "../../../Assets/icons/projectsImg/Rectangle 1181.webp";
 import img2 from "../../../Assets/icons/projectsImg/Rectangle 1181(2).webp";
 import img3 from "../../../Assets/icons/projectsImg/Rectangle 1181(3).webp";
@@ -71,8 +69,12 @@ export const Works = () => {
     );
 };
 
+export const WorksStyled = styled.section`
+    margin: 176px 0 195px 0;
+`
+
 export const SectionTitleStyled = styled.h2`
-  font-family: 'Nunito', sans-serif;
+  font-family:  ${(props) => props.theme.fonts.primary};
   font-weight: 700;
   font-size: 48px;
   line-height: 120%;
