@@ -1,5 +1,4 @@
 import React from 'react';
-import {ProgressLineStyled} from "./ProgressLine.styled";
 import styled from "styled-components";
 
 type ProgressLineStyledProps = {
@@ -9,7 +8,7 @@ type ProgressLineStyledProps = {
 export const ProgressLine = ({value}: ProgressLineStyledProps) => {
     return (
         <ProgressLineStyled>
-            <ProgressValueStyled value={value}>{value + '%'}</ProgressValueStyled>
+            <ProgressLabelStyled value={value}>{value + '%'}</ProgressLabelStyled>
             <ProgressContainerStyled>
                 <ProgressBarStyled value={value}></ProgressBarStyled>
             </ProgressContainerStyled>
@@ -17,8 +16,12 @@ export const ProgressLine = ({value}: ProgressLineStyledProps) => {
     );
 };
 
+const ProgressLineStyled = styled.div`
+  position: relative;
+`
+
 export const ProgressContainerStyled = styled.div`
-  width: 210px;
+  width: 180px;
   height: 8px;
   background-color: #C4C4C4;
   border-radius: 5px;
@@ -35,7 +38,7 @@ export const ProgressBarStyled = styled.div<ProgressBarStyledProps>`
   background-color: ${(props) => props.theme.colors.primary};
   transition: width 0.3s ease;`
 
-export const ProgressValueStyled = styled.div<ProgressBarStyledProps>`
+export const ProgressLabelStyled = styled.div<ProgressBarStyledProps>`
   position: absolute;
   top: -30px;
   left: ${props => (props.value-5) + '%'};

@@ -13,7 +13,16 @@ export const SectionTitleStyled = styled.h2<SectionTitleStyledPropsType>`
   margin: 20px 0;
 
   & span {
-    color: ${(props) => props.theme.colors.primary }
+    color: ${(props) => props.theme.colors.primary};
+    text-align: center;
+  }
+
+  ${(props) => props.theme.media.medium} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `
+
 

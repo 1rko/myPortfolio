@@ -1,18 +1,18 @@
 import React from 'react';
 import {ContentContainer} from "../../../Components/ContentContainer";
-import {FlexContainer} from "../../../Components/FlexContainer";
+import {FlexContentContainer} from "../../../Components/FlexContentContainer";
 import {Slider} from "./slider/Slider";
 import styled from "styled-components";
 
 export const Testimonials = () => {
     return (
-        <TestimonialsStyled>
+        <TestimonialsStyled id={'testimonials'}>
             <ContentContainer>
-                <FlexContainer alignItems={'center'} justifyContent={'center'}>
+                <FlexContentContainer alignItems={'center'} justifyContent={'center'}>
                     <TestimonialWrapper>
                         <Slider/>
                     </TestimonialWrapper>
-                </FlexContainer>
+                </FlexContentContainer>
             </ContentContainer>
         </TestimonialsStyled>
     );

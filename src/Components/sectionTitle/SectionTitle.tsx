@@ -1,5 +1,6 @@
 import React from 'react';
-import {SectionTitleStyled} from "./SectionTitle.styled";
+import styled from "styled-components";
+import {SectionTitleStyled} from '../sectionTitle/SectionTitle.styled'
 
 type SectionTitleProps = {
     title: string
@@ -15,6 +16,7 @@ export const SectionTitle = ({title, subtitle, color}: SectionTitleProps) => {
         </SectionTitleStyled>
     );
 };
+
 
 
 

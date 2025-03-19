@@ -1,5 +1,4 @@
-import './App.css'
-import styled, {ThemeProvider} from "styled-components";
+import {ThemeProvider} from "styled-components";
 import {Header} from "./Layout/header/Header";
 import {Footer} from "./Layout/footer/Footer";
 import {MainContent} from "./Layout/MainContent";

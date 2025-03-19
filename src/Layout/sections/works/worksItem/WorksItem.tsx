@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlexContainer} from "../../../../Components/FlexContainer";
+import {FlexContentContainer} from "../../../../Components/FlexContentContainer";
 import {WorksItemStyled} from "./WorksItem.styled";
 
 type WorksItemPropsType = {
@@ -11,11 +11,11 @@ type WorksItemPropsType = {
 
 export const WorksItem = ({src, alt, title, description}: WorksItemPropsType) => {
     return <WorksItemStyled>
-        <FlexContainer flexDirection={'column'} alignItems={'start'} >
+        <FlexContentContainer flexDirection={'column'} alignItems={'start'} >
             <img src={src} alt={alt}/>
             <h3>{title}</h3>
             <p>{description}</p>
-        </FlexContainer>
+        </FlexContentContainer>
     </WorksItemStyled>;
 }
 

@@ -11,7 +11,7 @@ export const ButtonStyled = styled.a`
   height: 65px;
   font-weight: 400;
   font-size: 20px;
-  color: ${(props) => props.theme.colors.third};
+  color: ${(props) => props.theme.colors.menuItemText};
   cursor: pointer;
 `
 

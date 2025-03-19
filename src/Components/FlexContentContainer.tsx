@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
-type FlexContainerPropsType = {
+type FlexContentContainerPropsType = {
     flexDirection?: string,
-    justifyContent?: 'center' | 'space-between' | 'space-around' | 'end' | string,
+    justifyContent?: 'start'| 'center' | 'space-between' | 'space-around' | 'end' ,
     alignItems?: string
     wrap?: string
     gap?: string
     margin?: string
 }
 
-export const FlexContainer = styled.div<FlexContainerPropsType>`
+export const FlexContentContainer = styled.div<FlexContentContainerPropsType>`
   display: flex;
   flex-direction: ${(props) => props.flexDirection || 'row'};
   justify-content: ${(props) => props.justifyContent || 'center'};

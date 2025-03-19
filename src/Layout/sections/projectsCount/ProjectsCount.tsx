@@ -1,8 +1,8 @@
 import React from 'react';
 import {ContentContainer} from "../../../Components/ContentContainer";
-import {FlexContainer} from "../../../Components/FlexContainer";
-import {ProjectsCountStyled} from "./ProjectsCount.styled";
+import {FlexContentContainer} from "../../../Components/FlexContentContainer";
 import {ItemProjectsCount} from "./itemProjectsCount/ItemProjectsCount";
+import styled from "styled-components";
 
 const projectsCountData = [
     {
@@ -24,13 +24,18 @@ export const ProjectsCount = () => {
     return (
         <ProjectsCountStyled>
             <ContentContainer>
-                <FlexContainer justifyContent={'space-around'} alignItems={'center'}>
+                <FlexContentContainer justifyContent={'space-around'} gap={'15px'}>
                     {projectsCountData.map(item => (<ItemProjectsCount count={item.count} item={item.item}/>))}
-                </FlexContainer>
+                </FlexContentContainer>
             </ContentContainer>
         </ProjectsCountStyled>
     );
 };
+
+const ProjectsCountStyled = styled.section`
+  min-height: 244px;
+  background-color: ${(props)=>props.theme.colors.fourth}
+`
 
 
 

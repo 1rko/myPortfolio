@@ -1,6 +1,6 @@
 import React from 'react';
 import {ContentContainer} from "../../../Components/ContentContainer";
-import {FlexContainer} from "../../../Components/FlexContainer";
+import {FlexContentContainer} from "../../../Components/FlexContentContainer";
 import {WorksItem} from "./worksItem/WorksItem";
 import img1 from "../../../Assets/icons/projectsImg/Rectangle 1181.webp";
 import img2 from "../../../Assets/icons/projectsImg/Rectangle 1181(2).webp";
@@ -51,10 +51,10 @@ const worksArray = [
 
 export const Works = () => {
     return (
-        <WorksStyled>
+        <WorksStyled id={'works'}>
             <ContentContainer>
-                <SectionTitleStyled>Latest Works</SectionTitleStyled>
-                <FlexContainer justifyContent={'space-around'} wrap={'wrap'} >
+                <SectionTitleStyled>Latest Work</SectionTitleStyled>
+                <FlexContentContainer justifyContent={'space-around'} wrap={'wrap'} >
                     {worksArray.map(item => (
                         <WorksItem
                             title={item.title}
@@ -63,7 +63,7 @@ export const Works = () => {
                             description={item.description}
                         />
                     ))}
-                </FlexContainer>
+                </FlexContentContainer>
             </ContentContainer>
         </WorksStyled>
     );
@@ -79,8 +79,12 @@ export const SectionTitleStyled = styled.h2`
   font-size: 48px;
   line-height: 120%;
   color: ${(props) => props.theme.colors.secondary};
-  transform: translateX(40%);
   margin: 0 0 74px;
+
+  display: inline-block;    //центрирование 
+  position:relative;          
+  left: 50%;
+  transform: translateX(-50%);
 `
 
 

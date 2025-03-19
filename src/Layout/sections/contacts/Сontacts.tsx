@@ -1,32 +1,33 @@
 import React from 'react';
 import {ContentContainer} from "../../../Components/ContentContainer";
-import {FlexContainer} from "../../../Components/FlexContainer";
+import {FlexContentContainer} from "../../../Components/FlexContentContainer";
 import styled from "styled-components";
 import {ButtonStyled} from "../../../Components/Button.styled";
 import map from "../../../Assets/icons/Testimony/Mapsicle Map.png";
 
 export const Contacts = () => {
     return (
-        <ContactsStyled>
+        <ContactsStyled id={'contact'}>
             <ContentContainer>
                 <ContactsSectionTitle> Get in Touch</ContactsSectionTitle>
-                <FlexContainer justifyContent={'space-between'}>
+                <FlexContentContainer justifyContent={'space-between'} wrap={'wrap'} gap={'50px'}>
                     <FormStyled>
-                        <FlexContainer flexDirection={'column'} alignItems={'start'}>
+                        <FlexContentContainer flexDirection={'column'} alignItems={'start'}>
 
                             <label htmlFor="address">Your Email Adress</label>
-                            <input type="text" id="address" name="address" placeholder="something@website.com"/>
+                            <Field type="text" id="address" name="address" placeholder="something@website.com"/>
 
                             <label htmlFor="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="Question about your article"/>
+                            <Field type="text" id="subject" name="subject" placeholder="Question about your article"/>
 
-                            <textarea id="message" name="message" placeholder="Your message starts with…"></textarea>
+                            <Field as='textarea' id="message" name="message"
+                                   placeholder="Your message starts with…"></Field>
 
                             <ButtonSubmitStyled type="submit">Send</ButtonSubmitStyled>
-                        </FlexContainer>
+                        </FlexContentContainer>
                     </FormStyled>
                     <MapStyled src={map} alt={'Map'}></MapStyled>
-                </FlexContainer>
+                </FlexContentContainer>
             </ContentContainer>
         </ContactsStyled>
     );
@@ -37,7 +38,7 @@ export const ContactsStyled = styled.section`
 `
 
 export const ContactsSectionTitle = styled.div`
-  font-family: ${(props) => props.theme.fonts.primary};
+  font-family: ${(props) => props.theme.fonts.main};
 
   font-weight: 700;
   font-size: 48px;
@@ -48,43 +49,12 @@ export const ContactsSectionTitle = styled.div`
 `
 
 export const FormStyled = styled.form`
-  font-family: ${(props) => props.theme.fonts.primary};
+  font-family: ${(props) => props.theme.fonts.main};
   font-weight: 400;
   font-size: 16px;
-  color: ${(props) => props.theme.colors.nine};
+  color: ${(props) => props.theme.colors.fieldLabel};
   max-width: 523px;
   width: 100%;
-
-  input, textarea {
-    border: 1px solid ${(props) => props.theme.colors.third};
-    padding: 13px;
-    box-sizing: border-box;
-
-    &::placeholder {
-      font-family: ${(props) => props.theme.fonts.primary};
-      font-weight: 400;
-      font-size: 18px;
-      color: ${(props) => props.theme.colors.nine};
-      opacity: 0.6;
-    }
-
-    &:focus-visible {
-      outline: none; /* Убираем стандартный outline */
-      border: 2px solid ${(props) => props.theme.colors.eight};
-    }
-  }
-
-  input {
-    width: 524px;
-    height: 50px;
-  }
-
-  textarea {
-    width: 524px;
-    height: 176px;
-    margin: 56px 0 40px;
-    resize: none;
-  }
 
   label {
     margin-bottom: 7px;
@@ -93,14 +63,100 @@ export const FormStyled = styled.form`
   input + label {
     margin-top: 33px;
   }
-`
-export const ButtonSubmitStyled = styled(ButtonStyled)`
 
+    /*input, textarea {
+    border: 1px solid ${(props) => props.theme.colors.menuItemText};
+    padding: 13px;
+    box-sizing: border-box;
+
+
+    &::placeholder {
+      font-family: ${(props) => props.theme.fonts.primary};
+      font-weight: 400;
+      font-size: 18px;
+      color: ${(props) => props.theme.colors.fieldLabel};
+      opacity: 0.6;
+    }
+
+    &:focus-visible {
+      outline: 2px solid ${(props) => props.theme.colors.eight};
+    }
+  }
+
+  input {
+    width: 524px;
+    height: 50px;
+  }
+  */
+
+  textarea {
+    ${(props) => props.theme.media.medium} {
+      width: 350px;
+      height: 120px;
+    }
+    
+    ${(props) => props.theme.media.small} {
+      width: 100%;
+      height: 105px;
+    }
+  }
+`
+
+const Field = styled.input`
+  border: 1px solid ${(props) => props.theme.colors.menuItemText};
+  padding: 13px;
+  box-sizing: border-box;
+
+  width: 524px;
+  height: 50px;
+
+  &::placeholder {
+    font-family: ${(props) => props.theme.fonts.main};
+    font-weight: 400;
+    font-size: 18px;
+    color: ${(props) => props.theme.colors.fieldLabel};
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${(props) => props.theme.colors.eight};
+  }
+
+  /* Общие медиазапросы для всех типов полей */
+  ${(props) => props.theme.media.medium} {
+    width: 350px;
+    height: 40px;
+  }
+
+  ${(props) => props.theme.media.small} {
+    width: 100%;
+    height: 30px;
+  }
+
+  /* Стили для textarea */
+  ${(props) =>
+    props.as === 'textarea' &&
+    `
+    width: 524px;
+    height: 176px;
+    margin: 56px 0 40px;
+    resize: none;
+  `}
+`;
+
+export const ButtonSubmitStyled = styled(ButtonStyled)`
+  ${(props) => props.theme.media.small} {
+    margin: 0 auto;
+  }
 `
 
 export const MapStyled = styled.img`
   width: 512px;
   height: 506px;
+  @media screen and (max-width: 520px){
+    width: 100%;
+    height: 100%;
+  }
 `
 
 

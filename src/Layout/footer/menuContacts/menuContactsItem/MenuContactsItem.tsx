@@ -1,6 +1,6 @@
 import React from 'react';
-import {MenuContactsItemStyled} from "./MenuContactsItem.styled";
 import {Icon} from "../../../../Components/Icon";
+import styled from "styled-components";
 
 type MenuContactsItemPropsType = {
     iconId?: string
@@ -28,5 +28,25 @@ export const MenuContactsItem = ({
     );
 };
 
+const MenuContactsItemStyled = styled.li`
+  & a {
+    font-family: ${(props) => props.theme.fonts.secondary};
+    font-weight: 500;
+    font-size: 24px;
+    color: ${(props) => props.theme.colors.menuItemText};
+
+    & svg {
+      margin-right: 20px;
+    }
+
+    ${(props) => props.theme.media.medium} {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+    }
+  }
+`
 
 
