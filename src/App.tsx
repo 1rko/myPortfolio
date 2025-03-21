@@ -4,6 +4,7 @@ import {Footer} from "./Layout/footer/Footer";
 import {MainContent} from "./Layout/MainContent";
 import {GlobalStyle} from "./Styles/GlobalStyle";
 import {myTheme} from "./Styles/MyTheme.styled";
+import {GoToTopBtn} from "./Components/goToTopBtn";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Header/>
                 <MainContent/>
                 <Footer/>
+                <GoToTopBtn/>
             </ThemeProvider>
         </div>
     )

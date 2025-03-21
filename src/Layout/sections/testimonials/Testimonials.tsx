@@ -19,7 +19,7 @@ export const Testimonials = () => {
 };
 
 export const TestimonialsStyled = styled.section`
-  background-color: ${(props) => props.theme.colors.fourth};
+  background-color: ${(props) => props.theme.colors.projectCountBG};
 `
 
 export const TestimonialWrapper = styled.div`

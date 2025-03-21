@@ -1,15 +1,13 @@
 import styled from "styled-components";
+import {font} from "../../Common/font"
+import {myTheme} from "../../Styles/MyTheme.styled";
 
 type SectionTitleStyledPropsType = {
     color?: string
 }
 
 export const SectionTitleStyled = styled.h2<SectionTitleStyledPropsType>`
-  font-family: 'Nunito', sans-serif;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 120%;
-  color: ${(props) => props.theme.colors.secondary};
+  ${font({family: myTheme.fonts.secondary, weight: 700, fMin: 32, fMax: 50, color: myTheme.colors.titleDarkText})}
   margin: 20px 0;
 
   & span {

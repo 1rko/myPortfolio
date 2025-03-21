@@ -1,33 +1,44 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {Menu} from "./Menu";
 import {ContentContainer} from "../../Components/ContentContainer";
 import {FlexContentContainer} from "../../Components/FlexContentContainer";
 import styled from "styled-components";
 import {MobileMenu} from "./MobileMenu";
-import { Link } from 'react-scroll';
+import {Link, animateScroll as scroll} from 'react-scroll';
 
-const menuItems = [
-    {title: 'Home', link: 'home'},
-    {title: 'About', link: 'about'},
-    {title: 'Latest Works', link: 'works'},
-    {title: 'Testimonials', link: 'testimonials'},
-    {title: 'Contact', link: 'contact'}
+export const menuItems = [
+    {title: 'Home', linkId: 'home'},
+    {title: 'About', linkId: 'about'},
+    {title: 'Latest Works', linkId: 'works'},
+    {title: 'Testimonials', linkId: 'testimonials'},
+    {title: 'Contact', linkId: 'contact'}
 ]
 
-export type menuItemsProps = typeof menuItems
+export type menuItemType = {
+    title: string
+    linkId: string
+}
+
+export type menuPropsType = {
+    menuItems: Array<menuItemType>
+}
 
 export const Header = () => {
+
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    };
+
     return (
         <StyledHeader>
             <ContentContainer>
                 <FlexContentContainer justifyContent={'space-between'}>
                     <Link
-                        to={`home`}
                         smooth={true} // Плавная прокрутка
-                        duration={500} // Длительность анимации
-                        offset={-100}
-                    ><LogoStyled>IRKO</LogoStyled></Link>
-
+                        onClick={scrollToTop}
+                    >
+                        <LogoStyled>IRKO</LogoStyled>
+                    </Link>
                     <Menu menuItems={menuItems}/>
                     <MobileMenu menuItems={menuItems}></MobileMenu>
                 </FlexContentContainer>
@@ -46,8 +57,8 @@ const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  
-  & a{
+
+  & a {
     cursor: pointer;
   }
 `

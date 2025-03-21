@@ -6,6 +6,8 @@ import styled from "styled-components";
 import triangle from "../../../Assets/icons/Rectangle 396@2x.png"
 import {ButtonStyled} from "../../../Components/Button.styled";
 import {SectionTitleStyled} from "../../../Components/sectionTitle/SectionTitle.styled";
+import {font} from "../../../Common/font"
+import {myTheme} from "../../../Styles/MyTheme.styled";
 
 
 export const MainSection = () => {
@@ -59,18 +61,12 @@ const MainSectionContentWrapper = styled.section`
 `
 
 const SubtitleStyled = styled.span`
-  font-family: ${(props) => props.theme.fonts.main};
-  font-weight: 400;
-  font-size: 28px;
-  color: #000;
+  ${font({weight: 400, fMin: 28, fMax: 28, color: '#000'})}
 `
 
 const SectionMainTitle = styled.h2`
-  font-family: ${(props) => props.theme.fonts.primary};
-  font-weight: 400;
-  font-size: 24px;
+  ${font({weight: 400, fMin: 18, fMax: 24, color: myTheme.colors.mainText})}
   letter-spacing: 0.06em;
-  color: ${(props) => props.theme.colors.mainText};
   margin-bottom: 40px;
 
   ${(props) => props.theme.media.medium} {
@@ -80,7 +76,6 @@ const SectionMainTitle = styled.h2`
 
 const ImgPhotoAndBackgroundWrapper = styled.div`
   position: relative;
-  
 `
 
 /*const StyledBackground = styled.div`
@@ -121,7 +116,7 @@ const PhotoImg = styled.img`
   border: 1px solid #000;
   border-radius: 20px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  
+
   width: 100%;
   //max-width: 432px;
   min-width: 200px;
@@ -143,14 +138,14 @@ const BcgImg = styled.img`
   position: absolute;
   //top: -64px;
   right: -127px;
-  left:-27px;
+  left: -27px;
   bottom: -19px;
   z-index: -9999;
-  
+
   max-width: 621px;
   max-height: 692px;
   width: 140%;
- 
+
   //min-height: 376px;
   //min-height: 692px;
   object-fit: cover;

@@ -33,8 +33,7 @@ export const ProjectsCount = () => {
 };
 
 const ProjectsCountStyled = styled.section`
-  min-height: 244px;
-  background-color: ${(props)=>props.theme.colors.fourth}
+  background-color: ${(props)=>props.theme.colors.projectCountBG};
 `
 
 

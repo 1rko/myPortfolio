@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -6,19 +6,24 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body {
     position: relative;
 
     font-family: ${(props) => props.theme.fonts.main};
     
-    & a{
+    & span, h1, h2, h2, a, p{
+      caret-color: transparent;   //убирает мигающий курсор на тексте
+    }
+
+    & a {
       text-decoration: none;
     }
-    
+
     & li {
       list-style-type: none;
     }
+
     & button {
       /* Сброс отступов и границ */
       border: none;
@@ -28,5 +33,6 @@ export const GlobalStyle = createGlobalStyle`
       font-family: inherit;
       font-size: inherit;
       color: inherit;
+    }
   }
 `;

@@ -15,12 +15,14 @@ export const MenuIcons = () => {
     return (
         <MenuIconsStyled>
             <FlexContentContainer gap={'20px'}>
-                {menuIcons.map((item, index) => (
-                        <Icon key={index}
-                              iconId={item.iconId}
-                        />
-                    )
-                )}
+                <a href={''}>
+                    {menuIcons.map((item, index) => (
+                            <Icon key={index}
+                                  iconId={item.iconId}
+                            />
+                        )
+                    )}
+                </a>
             </FlexContentContainer>
         </MenuIconsStyled>
     );

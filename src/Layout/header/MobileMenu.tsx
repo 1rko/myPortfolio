@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import {menuItemsProps} from "./Header";
+import { menuPropsType} from "./Header";
 import styled, {css} from "styled-components";
 import {Menu} from "./Menu";
 
-export const MobileMenu = ({menuItems}: menuItemsProps) => {
+export const MobileMenu = ({menuItems}: menuPropsType) => {
     let [isOpen, setIsOpen] = useState(false)
 
     const onClickHandler = () => {
@@ -18,7 +18,7 @@ export const MobileMenu = ({menuItems}: menuItemsProps) => {
         <StyledMobileMenuWrapper isOpen={isOpen} onClick={() => {
             setIsOpen(false)
         }}>
-            <Menu menuItems={menuItems}/>
+            <Menu menuItems={menuItems} />
         </StyledMobileMenuWrapper>
     </StyledMobileMenu>
 
@@ -27,7 +27,7 @@ export const MobileMenu = ({menuItems}: menuItemsProps) => {
 const StyledMobileMenu = styled.div`
   display: none;
 
-  ${(props) => props.theme.media.medium} {
+  ${(props) => props.theme.media.large} {
     display: block;
   }
 `
@@ -38,6 +38,7 @@ const BurgerButton = styled.button`
   height: 100px;
   right: -15px;
   z-index: 999999;
+  cursor: pointer;
 
   & span {
     display: inline-block;
@@ -52,6 +53,7 @@ const BurgerButton = styled.button`
     ${(props) => props.isOpen && css <{ isOpen: boolean }>`
       background-color: rgba(255, 255, 255, 0);
     `}
+    
     &::before {
       content: '';
       display: block;
@@ -122,7 +124,7 @@ const StyledMobileMenuWrapper = styled.div`
       margin: 0 0 20px;
 
       & a {
-        font-weight: 400;
+        /*font-weight: 400;*/
         font-size: 36px;
       }
     }

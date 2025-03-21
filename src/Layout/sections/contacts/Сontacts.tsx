@@ -79,7 +79,7 @@ export const FormStyled = styled.form`
     }
 
     &:focus-visible {
-      outline: 2px solid ${(props) => props.theme.colors.eight};
+      outline: 2px solid ${(props) => props.theme.colors.activeFieldBorder};
     }
   }
 
@@ -103,7 +103,7 @@ export const FormStyled = styled.form`
 `
 
 const Field = styled.input`
-  border: 1px solid ${(props) => props.theme.colors.menuItemText};
+  border: 1px solid ${(props) => props.theme.colors.fieldBorder};
   padding: 13px;
   box-sizing: border-box;
 
@@ -119,7 +119,7 @@ const Field = styled.input`
   }
 
   &:focus-visible {
-    outline: 2px solid ${(props) => props.theme.colors.eight};
+    outline: 2px solid ${(props) => props.theme.colors.activeFieldBorder};
   }
 
   /* Общие медиазапросы для всех типов полей */
