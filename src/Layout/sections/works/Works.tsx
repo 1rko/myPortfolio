@@ -13,7 +13,7 @@ import {myTheme} from "../../../Styles/MyTheme.styled";
 import {font} from "../../../Common/font";
 import {Tabs} from "./Tabs";
 import {TabsItemPropsType} from "./TabItem";
-import { motion } from "motion/react"
+import {AnimatePresence, motion} from "framer-motion"
 
 const worksArray = [
     {
@@ -21,42 +21,48 @@ const worksArray = [
         alt: 'work',
         title: 'Project title',
         description: 'UI, Art drection',
-        type: 'react'
+        type: 'react',
+        id: 1
     },
     {
         src: img2,
         alt: 'work',
         title: 'Project title',
         description: 'UI, Art drection',
-        type: 'landing'
+        type: 'landing',
+        id: 2
     },
     {
         src: img3,
         alt: 'work',
         title: 'Project title',
         description: 'UI, Art drection',
-        type: 'spa'
+        type: 'spa',
+        id: 3
     },
     {
         src: img4,
         alt: 'work',
         title: 'Project title',
         description: 'UI, Art drection',
-        type: 'landing'
+        type: 'landing',
+        id: 4
     },
     {
         src: img5,
         alt: 'work',
         title: 'Project title',
         description: 'UI, Art drection',
-        type: 'react'
+        type: 'react',
+        id: 5
     },
     {
         src: img6,
         alt: 'work',
         title: 'Project title',
         description: 'UI, Art drection',
-        type: 'spa'
+        type: 'spa',
+        id: 6
     }
 ]
 
@@ -100,16 +106,27 @@ export const Works = () => {
                 <SectionTitleStyled>Latest Work</SectionTitleStyled>
                 <Tabs tabsItems={tabsItems} tabClick={changeStatusHandler}/>
                 <FlexContentContainer justifyContent={'space-around'} wrap={'wrap'} gap={'45px'}>
-                    {works.map(item => (
-                        <motion.div animate={{ opacity: isVisible ? 1 : 0 }}>
-                            <WorksItem
-                                title={item.title}
-                                src={item.src}
-                                alt={item.alt}
-                                description={item.description}
-                            />
-                        </motion.div>
-                    ))}
+
+                    <AnimatePresence>
+                        {works.map(item => (
+                            <motion.div
+                                key={item.id}
+                                initial={{opacity: 0}}
+                                animate={{opacity: 1}}
+                                exit={{opacity: 0}}
+                                layout>
+
+                                <WorksItem
+                                    key={item.id}
+                                    title={item.title}
+                                    src={item.src}
+                                    alt={item.alt}
+                                    description={item.description}
+                                />
+                            </motion.div>
+                        ))}
+                    </AnimatePresence>
+
                 </FlexContentContainer>
             </ContentContainer>
         </WorksStyled>
