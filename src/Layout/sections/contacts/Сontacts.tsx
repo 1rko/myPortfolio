@@ -4,6 +4,8 @@ import {FlexContentContainer} from "../../../Components/FlexContentContainer";
 import styled from "styled-components";
 import {ButtonStyled} from "../../../Components/Button.styled";
 import map from "../../../Assets/icons/Testimony/Mapsicle Map.png";
+import {font} from "../../../Common/font"
+import {myTheme} from "../../../Styles/MyTheme.styled";
 
 export const Contacts = () => {
     return (
@@ -34,18 +36,22 @@ export const Contacts = () => {
 };
 
 export const ContactsStyled = styled.section`
-  margin: 100px 0 160px;
+  margin: 0 0 160px;
+
+  ${(props) => props.theme.media.medium} {
+    margin: 0 0 74px;
+  }
 `
 
 export const ContactsSectionTitle = styled.div`
-  font-family: ${(props) => props.theme.fonts.main};
-
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 87%;
-  color: ${(props) => props.theme.colors.secondary};
+  ${font({weight: 700, lineHeight: 0.87, fMin: 28, fMax: 48, color: myTheme.colors.titleDarkText})}
+  white-space: nowrap;
   transform: translateX(40%);
   margin: 0 0 80px;
+
+  ${(props) => props.theme.media.medium} {
+    text-transform: uppercase;
+  }
 `
 
 export const FormStyled = styled.form`

@@ -87,7 +87,7 @@ export const Skills = () => {
                 </FlexContentContainer>
 
                 <SkillsWrapperStyled>
-                    <FlexContentContainer justifyContent={'center'} gap={'40px'} wrap={'wrap'} margin={'60px 0'}>
+                    <FlexContentContainer justifyContent={'center'} gap={'40px'} wrap={'wrap'} margin={'60px 0 0 0'}>
 
                         {skillsArray.map((item, index) => (
                             <SkillItem key={index} icon={item.icon} value={item.value}/>))}
@@ -110,6 +110,10 @@ export const SkillsStyled = styled.section`
       justify-content: center;
       align-items: center;
     }
+  }
+
+  ${(props) => props.theme.media.medium} {
+    margin-bottom: 94px;
   }
 `
 

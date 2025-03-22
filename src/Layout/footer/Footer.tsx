@@ -10,7 +10,7 @@ export const Footer = () => {
         <StyledFooter>
             <ContentContainer>
                 <nav>
-                    <FlexContentContainer flexDirection={'column'} gap={'36px'} alignItems={'center'}>
+                    <FlexContentContainer flexDirection={'column'} gap={'36px'} alignItems={'center'} justifyContent={'center'}>
                         <MenuContacts/>
                         <MenuIcons/>
                     </FlexContentContainer>

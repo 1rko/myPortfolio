@@ -5,30 +5,34 @@ import {font} from "../../../../Common/font";
 import {myTheme} from "../../../../Styles/MyTheme.styled";
 import styled from "styled-components";
 
-type ItemProjectsCountPropsType={
+type ItemProjectsCountPropsType = {
     count: number
     item: string
 }
 
-export const ItemProjectsCount = ({count, item}:ItemProjectsCountPropsType) => {
+export const ItemProjectsCount = ({count, item}: ItemProjectsCountPropsType) => {
     return (
         <ItemProjectsCountStyled>
-                <FlexContentContainer flexDirection={'column'} alignItems={'center'} justifyContent={'center'}>
-                    <span>{count+'+'}</span>
-                    <h2>{item}</h2>
-                </FlexContentContainer>
+            <FlexContentContainer flexDirection={'column'} alignItems={'center'} justifyContent={'center'}>
+                <span>{count + '+'}</span>
+                <h2>{item}</h2>
+            </FlexContentContainer>
         </ItemProjectsCountStyled>
     );
 };
 
-const ItemProjectsCountStyled = styled.section`
-  
+const ItemProjectsCountStyled = styled.div`
+
   text-transform: uppercase;
   padding: 55px 0 66px;
   text-align: center;
-  
-  & span, h2{
+
+  & span, h2 {
     white-space: nowrap;
+
+    ${(props) => props.theme.media.xlarge} {
+      white-space: nowrap;
+    }
   }
 
   span {
@@ -42,7 +46,6 @@ const ItemProjectsCountStyled = styled.section`
   ${(props) => props.theme.media.medium} {
     padding: 29px 0 27px;
   }
-
 `
 
 

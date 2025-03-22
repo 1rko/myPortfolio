@@ -34,6 +34,11 @@ export const ProjectsCount = () => {
 
 const ProjectsCountStyled = styled.section`
   background-color: ${(props)=>props.theme.colors.projectCountBG};
+  margin: 0 0 176px 0;
+
+  ${(props) => props.theme.media.medium} {
+    margin: 0 0 107px 0;
+  }
 `
 
 

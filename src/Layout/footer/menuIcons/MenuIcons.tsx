@@ -2,6 +2,7 @@ import React from 'react';
 import {FlexContentContainer} from "../../../Components/FlexContentContainer";
 import {Icon} from "../../../Components/Icon";
 import styled from "styled-components";
+import {myTheme} from "../../../Styles/MyTheme.styled";
 
 const menuIcons = [
     {iconId: 'twitter'},
@@ -14,21 +15,33 @@ const menuIcons = [
 export const MenuIcons = () => {
     return (
         <MenuIconsStyled>
-            <FlexContentContainer gap={'20px'}>
-                <a href={''}>
-                    {menuIcons.map((item, index) => (
+            <FlexContentContainer gap={'10px'} justifyContent={'space-between'}>
+                {menuIcons.map((item, index) => (
+                        <a href={''}>
                             <Icon key={index}
                                   iconId={item.iconId}
                             />
-                        )
-                    )}
-                </a>
+                        </a>
+                    )
+                )}
             </FlexContentContainer>
         </MenuIconsStyled>
     );
 };
 
-const MenuIconsStyled = styled.section`
+const MenuIconsStyled = styled.div`
+  position: relative;
+
+  & a {
+    position: relative;
+    top: 0;
+    transition: ${myTheme.animations.transition};
+    
+    &:hover {
+      top: -5px;
+    }
+  }
+  
   ${FlexContentContainer} {
     ${(props) => props.theme.media.medium} {
       gap: 10px;

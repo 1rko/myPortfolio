@@ -13,7 +13,8 @@ const mediaQueries = {
     small: `@media screen and (max-width: ${breakpoints.small})`,
     medium: `@media screen and (max-width: ${breakpoints.medium})`,
     large: `@media screen and (max-width: ${breakpoints.large})`,
-    xlarge: `@media screen and (max-width: ${breakpoints.xlarge})`
+    xlarge: `@media screen and (max-width: ${breakpoints.xlarge}),
+    `
 };
 
 // Определение типа темы
@@ -25,6 +26,7 @@ export const myTheme: DefaultTheme = {
         menuItemText: '#f8eeef',
         fieldBorder: 'rgba(0, 0, 0, 0.2)',
         projectCountBG: '#FEC5CE',
+        tabButton: 'rgba(245,35,67,0.28)',
         fifth: '#2d2d2d',
         six: '#05060a',
         seven: '#fe2c54',
@@ -40,4 +42,7 @@ export const myTheme: DefaultTheme = {
     },
     breakpoints, // Добавляем breakpoints
     media: mediaQueries, // Добавляем медиа-запросы
+    animations:{
+        transition: '0.2s ease-in-out'
+    }
 };

@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
-export const WorksItemStyled = styled.section`
+export const WorksItemStyled = styled.div`
   color: ${(props) => props.theme.colors.fifth};
 
   img {
     height: 330px;
     width: 330px;
     margin: 0 0 25px;
-    
   }
 
   h3 {

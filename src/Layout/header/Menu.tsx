@@ -32,7 +32,14 @@ const StyledMenu = styled.ul`
   padding: 0;
 
   & li {
+    position: relative;
     margin-left: 60px;
+    transform: translateY(0);
+    transition: ${myTheme.animations.transition};
+    
+    &:hover{
+      transform: translateY(-5px);
+    }
 
     & + li {
       margin-left: 60px;

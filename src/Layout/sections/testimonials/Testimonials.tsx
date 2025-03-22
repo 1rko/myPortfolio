@@ -20,6 +20,11 @@ export const Testimonials = () => {
 
 export const TestimonialsStyled = styled.section`
   background-color: ${(props) => props.theme.colors.projectCountBG};
+  margin: 0 0 100px;
+
+  ${(props) => props.theme.media.medium} {
+    margin: 0 0 60px;
+  }
 `
 
 export const TestimonialWrapper = styled.div`
