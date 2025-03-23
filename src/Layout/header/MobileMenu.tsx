@@ -1,7 +1,8 @@
 import React, {useState} from "react";
-import { menuPropsType} from "./Header";
+import {menuPropsType} from "./Header";
 import styled, {css} from "styled-components";
 import {Menu} from "./Menu";
+import {myTheme} from "../../Styles/MyTheme.styled";
 
 export const MobileMenu = ({menuItems}: menuPropsType) => {
     let [isOpen, setIsOpen] = useState(false)
@@ -18,7 +19,7 @@ export const MobileMenu = ({menuItems}: menuPropsType) => {
         <StyledMobileMenuWrapper isOpen={isOpen} onClick={() => {
             setIsOpen(false)
         }}>
-            <Menu menuItems={menuItems} />
+            <Menu menuItems={menuItems}/>
         </StyledMobileMenuWrapper>
     </StyledMobileMenu>
 
@@ -53,7 +54,6 @@ const BurgerButton = styled.button`
     ${(props) => props.isOpen && css <{ isOpen: boolean }>`
       background-color: rgba(255, 255, 255, 0);
     `}
-    
     &::before {
       content: '';
       display: block;
@@ -103,30 +103,34 @@ const StyledMobileMenuWrapper = styled.div`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-
   transform: scale(0);
-
   background-color: ${(props) => props.theme.colors.primary + 'BB'};
-  transition: transform ease-in-out 0.5s;
+  transition: .2s ease-in-out;
 
-
-  ${(props) => props.isOpen && css <{ isOpen: boolean }>`
-    transform: scale(1);
-  `}
   & ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0px;
+    transition: .5s ease-in-out;
 
     & li {
       text-align: center;
       margin: 0 0 20px;
 
       & a {
-        /*font-weight: 400;*/
         font-size: 36px;
       }
     }
   }
+
+  ${(props) => props.isOpen && css <{ isOpen: boolean }>`
+    transform: scale(1);
+
+    & ul {
+      gap: 30px;
+    }
+
+  `}
 `

@@ -114,7 +114,8 @@ export const Works = () => {
                                 initial={{opacity: 0}}
                                 animate={{opacity: 1}}
                                 exit={{opacity: 0}}
-                                layout>
+                                layout
+                                transition={{ duration: 0.3 }}>
 
                                 <WorksItem
                                     key={item.id}

@@ -23,7 +23,8 @@ const S_TabButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  ${font({weight: 400, fMin: 20, fMax: 24, color: myTheme.colors.titleDarkText})}
+  ${font({weight: 400, fMin: 20, fMax: 24, color: myTheme.colors.titleDarkText})};
+  white-space: nowrap;
   cursor: pointer;
   z-index: 0;
 
