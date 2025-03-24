@@ -1,4 +1,3 @@
-import React from 'react';
 import {ContentContainer} from "../../../Components/ContentContainer";
 import portfolioPhoto from "../../../Assets/myPhoto.jpg";
 import styled from "styled-components";
@@ -59,11 +58,6 @@ const skillsArray = [
         value: 50
     }
 ]
-
-const imgF = {
-    src: imgFigma as string | undefined,
-    alt: 'figma'
-}
 
 export const Skills = () => {
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import {FlexContentContainer} from "../../../Components/FlexContentContainer";
 import {Icon} from "../../../Components/Icon";
 import styled from "styled-components";
@@ -16,9 +15,9 @@ export const MenuIcons = () => {
     return (
         <MenuIconsStyled>
             <FlexContentContainer gap={'10px'} justifyContent={'space-between'}>
-                {menuIcons.map((item, index) => (
-                        <a href={''}>
-                            <Icon key={index}
+                {menuIcons.map((item) => (
+                        <a href={''} key={item.iconId}>
+                            <Icon
                                   iconId={item.iconId}
                             />
                         </a>

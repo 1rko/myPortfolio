@@ -1,4 +1,3 @@
-import React from 'react';
 import {Icon} from "../../../../Components/Icon";
 import styled from "styled-components";
 import {font} from "../../../../Common/font";

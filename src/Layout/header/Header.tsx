@@ -1,4 +1,3 @@
-import React, {useEffect, useRef, useState} from 'react';
 import {Menu} from "./Menu";
 import {ContentContainer} from "../../Components/ContentContainer";
 import {FlexContentContainer} from "../../Components/FlexContentContainer";

@@ -1,4 +1,3 @@
-import React from 'react';
 import {FlexContentContainer} from "../../../../Components/FlexContentContainer";
 import {WorksItemStyled} from "./WorksItem.styled";
 

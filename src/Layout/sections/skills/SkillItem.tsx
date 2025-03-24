@@ -1,4 +1,3 @@
-import React from 'react';
 import {Icon} from "../../../Components/Icon";
 import {ProgressLine} from "../../../Components/ProgressLine";
 import {FlexContentContainer} from "../../../Components/FlexContentContainer";

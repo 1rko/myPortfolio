@@ -1,4 +1,3 @@
-import React from 'react';
 import {MainSection} from "./sections/mainSection/MainSection";
 import {Skills} from "./sections/skills/Skills";
 import {Works} from "./sections/works/Works";

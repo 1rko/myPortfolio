@@ -1,4 +1,3 @@
-import React from 'react';
 import {FlexContentContainer} from "../../Components/FlexContentContainer";
 import {ContentContainer} from "../../Components/ContentContainer";
 import {MenuIcons} from "./menuIcons/MenuIcons";

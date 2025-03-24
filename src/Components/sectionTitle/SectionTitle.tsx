@@ -1,5 +1,3 @@
-import React from 'react';
-import styled from "styled-components";
 import {SectionTitleStyled} from '../sectionTitle/SectionTitle.styled'
 
 type SectionTitleProps = {

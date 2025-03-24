@@ -1,4 +1,4 @@
-import React, {ElementRef, useRef} from 'react';
+import {ElementRef, FormEventHandler, useRef} from 'react';
 import {ContentContainer} from "../../../Components/ContentContainer";
 import {FlexContentContainer} from "../../../Components/FlexContentContainer";
 import styled from "styled-components";
@@ -11,7 +11,7 @@ import emailjs from '@emailjs/browser';
 export const Contacts = () => {
     const form = useRef<ElementRef<'form'> | null>(null);
 
-    const sendEmail = (e) => {
+    const sendEmail: FormEventHandler<HTMLFormElement> | undefined = (e) => {
         e.preventDefault();
 
         if (!form.current) return;

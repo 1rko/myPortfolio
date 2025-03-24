@@ -1,4 +1,3 @@
-import React from 'react';
 import {ContentContainer} from "../../../Components/ContentContainer";
 import {FlexContentContainer} from "../../../Components/FlexContentContainer";
 import portfolioPhoto from "../../../Assets/myPhoto.jpg";

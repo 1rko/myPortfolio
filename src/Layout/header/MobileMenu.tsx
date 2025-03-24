@@ -1,8 +1,7 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import {menuPropsType} from "./Header";
 import styled, {css} from "styled-components";
 import {Menu} from "./Menu";
-import {myTheme} from "../../Styles/MyTheme.styled";
 
 export const MobileMenu = ({menuItems}: menuPropsType) => {
     let [isOpen, setIsOpen] = useState(false)
@@ -33,7 +32,12 @@ const StyledMobileMenu = styled.div`
   }
 `
 
-const BurgerButton = styled.button`
+type BurgerButtonPropsType={
+    isOpen: boolean
+    onClick: (value:boolean)=>void
+}
+
+const BurgerButton = styled.button<BurgerButtonPropsType>`
   position: relative;
   width: 70px;
   height: 100px;

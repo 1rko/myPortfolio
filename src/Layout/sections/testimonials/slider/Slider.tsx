@@ -1,5 +1,3 @@
-import React from 'react';
-import {ContentContainer} from "../../../../Components/ContentContainer";
 import {FlexContentContainer} from "../../../../Components/FlexContentContainer";
 import ava from "../../../../Assets/icons/Testimony/Rectangle 124.webp";
 import bg from "../../../../Assets/icons/texture background.svg";

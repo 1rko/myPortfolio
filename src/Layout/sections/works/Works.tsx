@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {ContentContainer} from "../../../Components/ContentContainer";
 import {FlexContentContainer} from "../../../Components/FlexContentContainer";
 import {WorksItem} from "./worksItem/WorksItem";

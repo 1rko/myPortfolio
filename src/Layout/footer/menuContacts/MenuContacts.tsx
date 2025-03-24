@@ -1,5 +1,3 @@
-import React from 'react';
-import {FlexContentContainer} from "../../../Components/FlexContentContainer";
 import {MenuContactsItem} from "./menuContactsItem/MenuContactsItem";
 import styled from "styled-components";
 

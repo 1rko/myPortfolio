@@ -1,6 +1,4 @@
-import React from 'react';
 import styled from "styled-components";
-import {myTheme} from "../../../Styles/MyTheme.styled";
 import {TabItem, TabsItemPropsType,} from "./TabItem"
 import {StatusType} from "./Works";
 
@@ -14,7 +12,7 @@ export const Tabs = ({tabsItems, tabClick}: TabsPropsType) => {
         <S_Tabs>
             <ul>
                 {tabsItems.map(item =>
-                    <TabItem id={item.id} title={item.title} tabClick={tabClick}/>
+                    <TabItem key={item.id} id={item.id} title={item.title} tabClick={tabClick}/>
                 )
                 }
             </ul>

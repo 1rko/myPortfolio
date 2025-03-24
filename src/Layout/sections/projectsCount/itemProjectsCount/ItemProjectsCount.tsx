@@ -1,5 +1,3 @@
-import React from 'react';
-import {ContentContainer} from "../../../../Components/ContentContainer";
 import {FlexContentContainer} from "../../../../Components/FlexContentContainer";
 import {font} from "../../../../Common/font";
 import {myTheme} from "../../../../Styles/MyTheme.styled";

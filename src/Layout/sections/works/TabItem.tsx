@@ -1,4 +1,3 @@
-import React from 'react';
 import {StatusType} from "./Works";
 import styled from "styled-components";
 import {myTheme} from "../../../Styles/MyTheme.styled";
@@ -18,7 +17,11 @@ export const TabItem = ({title, id, tabClick}: TabsItemPropsType) => {
     );
 };
 
-const S_TabButton = styled.button`
+type S_TabButtonPropsType={
+    onClick: ()=>void
+}
+
+const S_TabButton = styled.button<S_TabButtonPropsType>`
   position: relative;
   display: flex;
   justify-content: center;
@@ -36,7 +39,7 @@ const S_TabButton = styled.button`
     position: absolute;
     bottom: -6px;
     left: -4px;
-    background-color: ${(props) => props.theme.colors.projectCountBG};
+    background-color: ${myTheme.colors.projectCountBG};
     z-index: -9;
   }
   
@@ -48,7 +51,7 @@ const S_TabButton = styled.button`
     transform: translateY(-3px);
    /* box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);*/
     &::before {
-      bottom: 0px;
+      bottom: 0;
     }
   }
 `
