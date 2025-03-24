@@ -26,6 +26,7 @@ export const GoToTopBtn = () => {
         <>
             {showBtn && (<S_GoToTopBtn>
                 <Link
+                    to={''}
                     smooth={true} // Плавная прокрутка
                     onClick={scrollToTop}
                 >

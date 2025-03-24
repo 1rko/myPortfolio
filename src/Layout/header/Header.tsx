@@ -33,6 +33,7 @@ export const Header = () => {
             <ContentContainer>
                 <FlexContentContainer justifyContent={'space-between'}>
                     <Link
+                        to={''}
                         smooth={true} // Плавная прокрутка
                         onClick={scrollToTop}
                     >

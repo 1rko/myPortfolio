@@ -1,4 +1,4 @@
-import {ElementRef, FormEventHandler, useRef} from 'react';
+import {ElementRef, FormEvent, useRef} from 'react';
 import {ContentContainer} from "../../../Components/ContentContainer";
 import {FlexContentContainer} from "../../../Components/FlexContentContainer";
 import styled from "styled-components";
@@ -11,7 +11,7 @@ import emailjs from '@emailjs/browser';
 export const Contacts = () => {
     const form = useRef<ElementRef<'form'> | null>(null);
 
-    const sendEmail: FormEventHandler<HTMLFormElement> | undefined = (e) => {
+    const sendEmail = (e:  FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if (!form.current) return;
@@ -27,7 +27,7 @@ export const Contacts = () => {
                     console.log('FAILED...', error.text);
                 },
             );
-        e.target.reset()
+       form.current?.reset()
     }
 
     return (

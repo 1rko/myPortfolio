@@ -32,9 +32,9 @@ const StyledMobileMenu = styled.div`
   }
 `
 
-type BurgerButtonPropsType={
+type BurgerButtonPropsType = {
     isOpen: boolean
-    onClick: (value:boolean)=>void
+    onClick: (value: boolean) => void
 }
 
 const BurgerButton = styled.button<BurgerButtonPropsType>`
@@ -92,7 +92,12 @@ const BurgerButton = styled.button<BurgerButtonPropsType>`
   }
 `
 
-const StyledMobileMenuWrapper = styled.div`
+type StyledMobileMenuWrapper = {
+    isOpen: boolean
+    onClick: () => void
+}
+
+const StyledMobileMenuWrapper = styled.div<StyledMobileMenuWrapper>`
   display: flex;
   justify-content: center;
   align-items: center;

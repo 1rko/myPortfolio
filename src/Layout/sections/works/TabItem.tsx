@@ -2,6 +2,7 @@ import {StatusType} from "./Works";
 import styled from "styled-components";
 import {myTheme} from "../../../Styles/MyTheme.styled";
 import {font} from "../../../Common/font";
+import {MouseEventHandler} from "react";
 
 export type TabsItemPropsType = {
     title: string
@@ -11,14 +12,14 @@ export type TabsItemPropsType = {
 
 export const TabItem = ({title, id, tabClick}: TabsItemPropsType) => {
     return (
-        <S_TabButton href={'#'} onClick={() => tabClick(id)}>
+        <S_TabButton onClick={() => tabClick(id)}>
             <li key={id}>{title}</li>
         </S_TabButton>
     );
 };
 
-type S_TabButtonPropsType={
-    onClick: ()=>void
+type S_TabButtonPropsType = {
+    onClick: (e: MouseEventHandler<HTMLButtonElement>) => void
 }
 
 const S_TabButton = styled.button<S_TabButtonPropsType>`
@@ -42,14 +43,14 @@ const S_TabButton = styled.button<S_TabButtonPropsType>`
     background-color: ${myTheme.colors.projectCountBG};
     z-index: -9;
   }
-  
+
   transform: translateY(0);
   box-shadow: none;
   transition: ${myTheme.animations.transition};
 
-  &:hover{
+  &:hover {
     transform: translateY(-3px);
-   /* box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);*/
+
     &::before {
       bottom: 0;
     }

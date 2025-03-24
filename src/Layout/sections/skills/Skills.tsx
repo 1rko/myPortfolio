@@ -4,7 +4,6 @@ import styled from "styled-components";
 import {SectionTitleStyled} from "../../../Components/sectionTitle/SectionTitle.styled";
 import {ButtonStyled} from "../../../Components/Button.styled";
 import {SkillItem} from "./SkillItem";
-import imgFigma from "../../../Assets/icons/Figma Icon.png"
 import triangle2 from "../../../Assets/icons/Rectangle 398.svg"
 import {FlexContentContainer} from "../../../Components/FlexContentContainer";
 

@@ -1,5 +1,5 @@
 import {menuPropsType} from "./Header";
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 import {Link} from 'react-scroll';
 import {font} from "../../Common/font";
 import {myTheme} from "../../Styles/MyTheme.styled";
